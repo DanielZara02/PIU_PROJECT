@@ -42,18 +42,20 @@
             this.grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grid.Location = new System.Drawing.Point(0, 147);
+            this.grid.Location = new System.Drawing.Point(0, 180);
+            this.grid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
             this.grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.grid.Size = new System.Drawing.Size(752, 323);
+            this.grid.Size = new System.Drawing.Size(1003, 398);
             this.grid.TabIndex = 0;
             // 
             // add_person
             // 
-            this.add_person.Location = new System.Drawing.Point(12, 85);
+            this.add_person.Location = new System.Drawing.Point(16, 105);
+            this.add_person.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.add_person.Name = "add_person";
-            this.add_person.Size = new System.Drawing.Size(135, 36);
+            this.add_person.Size = new System.Drawing.Size(180, 44);
             this.add_person.TabIndex = 1;
             this.add_person.Text = "ADD PERSON";
             this.add_person.UseVisualStyleBackColor = true;
@@ -61,10 +63,11 @@
             // 
             // txt_search
             // 
-            this.txt_search.Location = new System.Drawing.Point(460, 85);
+            this.txt_search.Location = new System.Drawing.Point(613, 105);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_search.Multiline = true;
             this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(238, 36);
+            this.txt_search.Size = new System.Drawing.Size(316, 43);
             this.txt_search.TabIndex = 2;
             this.txt_search.TextChanged += new System.EventHandler(this.btn_search_Click);
             // 
@@ -72,23 +75,25 @@
             // 
             this.btn_search.BackgroundImage = global::people_dir.Properties.Resources.search;
             this.btn_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_search.Location = new System.Drawing.Point(704, 85);
+            this.btn_search.Location = new System.Drawing.Point(939, 105);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(36, 36);
+            this.btn_search.Size = new System.Drawing.Size(48, 44);
             this.btn_search.TabIndex = 3;
             this.btn_search.UseVisualStyleBackColor = true;
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // frm_main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
-            this.ClientSize = new System.Drawing.Size(752, 470);
+            this.ClientSize = new System.Drawing.Size(1003, 578);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.add_person);
             this.Controls.Add(this.grid);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agenda";

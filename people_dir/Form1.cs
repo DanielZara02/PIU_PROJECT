@@ -25,7 +25,7 @@ namespace people_dir
             DataTable dtbl = data.data.file_to_datagrid();
             grid.DataSource = dtbl;
 
-
+            //la deschiderea aplicației vor fi afișate persoanele care își serbează ziua de naștere la data curentă
             for (int i = 0; i < grid.Rows.Count - 1; i++)
             {
                 DataGridViewRow row = grid.Rows[i];
@@ -48,6 +48,7 @@ namespace people_dir
 
         private void btn_search_Click(object sender, EventArgs e)
         {
+            //functia de cautare a persoanelor dupa nume, prenume etc.
             try
             {
                 (grid.DataSource as DataTable).DefaultView.RowFilter = string.Format("NUME LIKE '%{0}%' OR TELEFON LIKE '%{0}%' OR MAIL LIKE '%{0}%'", txt_search.Text);
