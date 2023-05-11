@@ -48,32 +48,50 @@
   <ItemGroup>
     <Compile Include="data\data.cs" />
     <Compile Include="data\PeopleController.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="frm_add_people.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frm_add_people.Designer.cs">
+      <DependentUpon>frm_add_people.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_dob_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_dob_info.Designer.cs">
+      <DependentUpon>frm_dob_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_main.Designer.cs">
+      <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
     <Compile Include="data\People.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frm_add_people.resx">
+      <DependentUpon>frm_add_people.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_dob_info.resx">
+      <DependentUpon>frm_dob_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_main.resx">
+      <DependentUpon>frm_main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -84,7 +102,40 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\search.png" />
+    <None Include="Resources\cake_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiply_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_contacts_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil_10px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_10px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_can_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Male User Group_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_7_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_groups_64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

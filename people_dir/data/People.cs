@@ -13,101 +13,23 @@ namespace people_dir.data
         public const int DATE_OF_BIRTH = 3;
         public const int T_NUMBER = 4;
         public const int EMAIL = 5;
+        public const int GROUP_NAME = 6;
 
-        private int id_people;
-        private string name_people;
-        private string surname_people;
-        private DateTime date_of_birth;
-        private string t_number_people;
-        private string e_mail_people;
+        public int id_people { get; set; }
+        public string name_people { get; set; }
+        public string surname_people { get; set; }
+        public DateTime date_of_birth { get; set; }
+        public string t_number_people { get; set; }
+        public string e_mail_people { get; set; }
 
-        public int ID_people
-        {
-            get
-            {
-                return this.id_people;
-            }
-
-            set
-            {
-                this.id_people = value;
-            }
-        }
-
-        public string NAME_people
-        {
-            get
-            {
-                return this.name_people;
-            }
-
-            set
-            {
-                this.name_people = value;
-            }
-        }
-
-
-        public string SURNAME_people
-        {
-            get
-            {
-                return this.surname_people;
-            }
-
-            set
-            {
-                this.surname_people = value;
-            }
-        }
-
-        public DateTime DATE_of_birth
-        {
-            get
-            {
-                return this.date_of_birth;
-            }
-
-            set
-            {
-                this.date_of_birth = value;
-            }
-        }
-
-
-        public string T_NUMBER_people
-        {
-            get
-            {
-                return this.t_number_people;
-            }
-
-            set
-            {
-                this.t_number_people = value;
-            }
-        }
-
-        public string E_MAIL_people
-        {
-            get
-            {
-                return this.e_mail_people;
-            }
-
-            set
-            {
-                this.e_mail_people = value;
-            }
-        }
-
+        public string group_people_name { get; set; }
 
         public People()
         {
-            name_people = surname_people = e_mail_people = t_number_people = string.Empty;
+            name_people = surname_people = e_mail_people = group_people_name = t_number_people = string.Empty;
         }
 
-        public People(int id_people, string name_people, string surname_people, DateTime date_of_birth, string t_number_people, string e_mail_people)
+        public People(int id_people, string name_people, string surname_people, DateTime date_of_birth, string t_number_people, string e_mail_people, string group_people_name)
         {
             this.id_people = id_people;
             this.name_people = name_people;
@@ -115,6 +37,7 @@ namespace people_dir.data
             this.date_of_birth = date_of_birth;
             this.t_number_people = t_number_people;
             this.e_mail_people = e_mail_people;
+            this.group_people_name = group_people_name;
 
             People.count++;
         }
