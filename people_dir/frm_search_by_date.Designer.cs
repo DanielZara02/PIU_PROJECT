@@ -121,6 +121,7 @@
             // 
             this.cb_year.BackColor = System.Drawing.Color.Gainsboro;
             this.cb_year.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cb_year.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_year.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
             this.cb_year.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.cb_year.FormattingEnabled = true;
@@ -138,6 +139,7 @@
             // 
             this.cb_month.BackColor = System.Drawing.Color.Gainsboro;
             this.cb_month.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cb_month.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_month.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
             this.cb_month.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.cb_month.FormattingEnabled = true;
@@ -305,9 +307,8 @@
             this.lbl_year_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.lbl_year_text.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbl_year_text.Location = new System.Drawing.Point(0, 0);
-            this.lbl_year_text.Margin = new System.Windows.Forms.Padding(20, 0, 3, 0);
+            this.lbl_year_text.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_year_text.Name = "lbl_year_text";
-            this.lbl_year_text.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.lbl_year_text.Size = new System.Drawing.Size(363, 268);
             this.lbl_year_text.TabIndex = 2;
             this.lbl_year_text.Text = "Nu sunt persoane născute în acest an";
@@ -329,9 +330,8 @@
             this.lbl_month_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.lbl_month_text.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbl_month_text.Location = new System.Drawing.Point(0, 0);
-            this.lbl_month_text.Margin = new System.Windows.Forms.Padding(20, 0, 3, 0);
+            this.lbl_month_text.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_month_text.Name = "lbl_month_text";
-            this.lbl_month_text.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.lbl_month_text.Size = new System.Drawing.Size(360, 268);
             this.lbl_month_text.TabIndex = 2;
             this.lbl_month_text.Text = "Nu sunt persoane născute în această luna";

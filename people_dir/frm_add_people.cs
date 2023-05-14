@@ -6,16 +6,21 @@ namespace people_dir
 {
     public partial class frm_add_people : Form
     {
+        //forma de adaugare a unei persoane
+
         public frm_add_people()
         {
             InitializeComponent();
         }
 
+        //event-ul de inchidere a formei
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
+        //event-ul de mutare a formei
+        //cand mouse-ul este pe forma si va fi apasat button -ul principal al mouse-ului forma se misca
         private void frm_add_people_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -25,6 +30,7 @@ namespace people_dir
             }
         }
 
+        //la incarcarea formei se va adauga valorile din lista GroupDatabase in combobox-ul cb_group
         private void frm_add_people_Load(object sender, EventArgs e)
         {
             foreach (string group in data.data.GroupDatabase)
@@ -37,6 +43,7 @@ namespace people_dir
 
         }
 
+        //apelarea functiei de adaugare a persoanei cu valorile din componentele formei ca parametre
         private void btn_ok_Click(object sender, EventArgs e)
         {
             PeopleController pc = new PeopleController();

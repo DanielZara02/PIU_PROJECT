@@ -5,8 +5,10 @@ namespace people_dir.data
     internal class People
     {
 
+        //numarul de persoane
         public static int count = 0;
 
+        //id-urile care se vor folosi pentru extragerea datelor din fisier
         public const int ID = 0;
         public const int NAME = 1;
         public const int SURNAME = 2;
@@ -15,6 +17,7 @@ namespace people_dir.data
         public const int EMAIL = 5;
         public const int GROUP_NAME = 6;
 
+        //variabile principale a clasei People
         public int id_people { get; set; }
         public string name_people { get; set; }
         public string surname_people { get; set; }
@@ -24,11 +27,13 @@ namespace people_dir.data
 
         public string group_people_name { get; set; }
 
+        //constructor inmplicit
         public People()
         {
             name_people = surname_people = e_mail_people = group_people_name = t_number_people = string.Empty;
         }
 
+        //constructor de crearea a obiectului de tip People
         public People(int id_people, string name_people, string surname_people, DateTime date_of_birth, string t_number_people, string e_mail_people, string group_people_name)
         {
             this.id_people = id_people;

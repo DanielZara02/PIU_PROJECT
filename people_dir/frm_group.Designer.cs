@@ -84,12 +84,13 @@
             // cb_group
             // 
             this.cb_group.BackColor = System.Drawing.Color.Gainsboro;
+            this.cb_group.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_group.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
             this.cb_group.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.cb_group.FormattingEnabled = true;
             this.cb_group.IntegralHeight = false;
             this.cb_group.ItemHeight = 25;
-            this.cb_group.Location = new System.Drawing.Point(3, 100);
+            this.cb_group.Location = new System.Drawing.Point(6, 117);
             this.cb_group.Margin = new System.Windows.Forms.Padding(3, 25, 3, 3);
             this.cb_group.Name = "cb_group";
             this.cb_group.Size = new System.Drawing.Size(194, 33);
@@ -102,7 +103,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(-1, 75);
+            this.label1.Location = new System.Drawing.Point(2, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(198, 19);
             this.label1.TabIndex = 28;
@@ -139,7 +140,7 @@
             this.grid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.grid.EnableHeadersVisualStyles = false;
             this.grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
-            this.grid.Location = new System.Drawing.Point(0, 139);
+            this.grid.Location = new System.Drawing.Point(0, 160);
             this.grid.MultiSelect = false;
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
@@ -157,7 +158,7 @@
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.grid.ShowCellToolTips = false;
             this.grid.ShowEditingIcon = false;
-            this.grid.Size = new System.Drawing.Size(437, 247);
+            this.grid.Size = new System.Drawing.Size(437, 226);
             this.grid.TabIndex = 29;
             // 
             // frm_group

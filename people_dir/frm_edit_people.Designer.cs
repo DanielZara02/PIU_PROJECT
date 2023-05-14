@@ -43,8 +43,8 @@
             this.txt_t_number = new System.Windows.Forms.TextBox();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.lbl_header = new System.Windows.Forms.Label();
-            this.cb_group = new System.Windows.Forms.ComboBox();
             this.pnl_header = new System.Windows.Forms.Panel();
+            this.cb_group = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             this.pnl_header.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +71,7 @@
             this.txt_surname.Multiline = true;
             this.txt_surname.Name = "txt_surname";
             this.txt_surname.Size = new System.Drawing.Size(347, 29);
-            this.txt_surname.TabIndex = 19;
+            this.txt_surname.TabIndex = 2;
             // 
             // btn_ok
             // 
@@ -83,7 +83,7 @@
             this.btn_ok.Location = new System.Drawing.Point(42, 494);
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(346, 44);
-            this.btn_ok.TabIndex = 27;
+            this.btn_ok.TabIndex = 8;
             this.btn_ok.Text = "Modifică";
             this.btn_ok.UseVisualStyleBackColor = false;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
@@ -169,6 +169,7 @@
             // cb_mail
             // 
             this.cb_mail.BackColor = System.Drawing.Color.Gainsboro;
+            this.cb_mail.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_mail.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
             this.cb_mail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.cb_mail.FormattingEnabled = true;
@@ -177,11 +178,14 @@
             "@gmail.com",
             "@yahoo.com",
             "@mail.ru",
-            "@yandex.ru"});
+            "@yandex.ru",
+            "@hotmail.com",
+            "@aol.com",
+            "@outlook.com"});
             this.cb_mail.Location = new System.Drawing.Point(243, 376);
             this.cb_mail.Name = "cb_mail";
             this.cb_mail.Size = new System.Drawing.Size(145, 33);
-            this.cb_mail.TabIndex = 25;
+            this.cb_mail.TabIndex = 6;
             // 
             // dtp_date_of_birth
             // 
@@ -193,10 +197,11 @@
             this.dtp_date_of_birth.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
             this.dtp_date_of_birth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_date_of_birth.Location = new System.Drawing.Point(42, 243);
+            this.dtp_date_of_birth.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.dtp_date_of_birth.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtp_date_of_birth.Name = "dtp_date_of_birth";
             this.dtp_date_of_birth.Size = new System.Drawing.Size(346, 32);
-            this.dtp_date_of_birth.TabIndex = 20;
+            this.dtp_date_of_birth.TabIndex = 3;
             // 
             // txt_mail
             // 
@@ -208,7 +213,7 @@
             this.txt_mail.Multiline = true;
             this.txt_mail.Name = "txt_mail";
             this.txt_mail.Size = new System.Drawing.Size(194, 33);
-            this.txt_mail.TabIndex = 23;
+            this.txt_mail.TabIndex = 5;
             // 
             // txt_t_number
             // 
@@ -220,7 +225,7 @@
             this.txt_t_number.Multiline = true;
             this.txt_t_number.Name = "txt_t_number";
             this.txt_t_number.Size = new System.Drawing.Size(346, 29);
-            this.txt_t_number.TabIndex = 21;
+            this.txt_t_number.TabIndex = 4;
             // 
             // txt_name
             // 
@@ -232,7 +237,7 @@
             this.txt_name.Multiline = true;
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(346, 29);
-            this.txt_name.TabIndex = 18;
+            this.txt_name.TabIndex = 1;
             // 
             // lbl_header
             // 
@@ -249,18 +254,6 @@
             this.lbl_header.Text = "Modifică";
             this.lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cb_group
-            // 
-            this.cb_group.BackColor = System.Drawing.Color.Gainsboro;
-            this.cb_group.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.cb_group.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.cb_group.FormattingEnabled = true;
-            this.cb_group.ItemHeight = 25;
-            this.cb_group.Location = new System.Drawing.Point(42, 445);
-            this.cb_group.Name = "cb_group";
-            this.cb_group.Size = new System.Drawing.Size(346, 33);
-            this.cb_group.TabIndex = 26;
-            // 
             // pnl_header
             // 
             this.pnl_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
@@ -273,12 +266,26 @@
             this.pnl_header.TabIndex = 24;
             this.pnl_header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_edit_people_MouseDown);
             // 
+            // cb_group
+            // 
+            this.cb_group.BackColor = System.Drawing.Color.Gainsboro;
+            this.cb_group.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_group.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.cb_group.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.cb_group.FormattingEnabled = true;
+            this.cb_group.ItemHeight = 25;
+            this.cb_group.Location = new System.Drawing.Point(43, 445);
+            this.cb_group.Name = "cb_group";
+            this.cb_group.Size = new System.Drawing.Size(345, 33);
+            this.cb_group.TabIndex = 33;
+            // 
             // frm_edit_people
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(430, 556);
+            this.Controls.Add(this.cb_group);
             this.Controls.Add(this.txt_surname);
             this.Controls.Add(this.btn_ok);
             this.Controls.Add(this.label6);
@@ -292,13 +299,11 @@
             this.Controls.Add(this.txt_mail);
             this.Controls.Add(this.txt_t_number);
             this.Controls.Add(this.txt_name);
-            this.Controls.Add(this.cb_group);
             this.Controls.Add(this.pnl_header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_edit_people";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_edit_people";
-            this.Load += new System.EventHandler(this.frm_edit_people_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_edit_people_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             this.pnl_header.ResumeLayout(false);

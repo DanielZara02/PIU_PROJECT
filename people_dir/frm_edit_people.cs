@@ -6,14 +6,18 @@ namespace people_dir
 {
     public partial class frm_edit_people : Form
     {
+        //forma de modificare a datelor unei persoane
         public frm_edit_people()
         {
             InitializeComponent();
         }
 
+        //variabile datelor (nemodificate) persoanei alese
         public int id_people;
         public string name_people;
         public string surname_people;
+
+        //apelarea functiei de editare cu variabilele de mai sus si cu datele din componente ca parametre
         private void btn_ok_Click(object sender, EventArgs e)
         {
             PeopleController pc = new PeopleController();
@@ -36,19 +40,14 @@ namespace people_dir
             }
         }
 
-        private void frm_edit_people_Load(object sender, EventArgs e)
-        {
-            foreach (string group in data.data.GroupDatabase)
-            {
-                cb_group.Items.Add(group);
-            }
-        }
-
+        //event-ul de inchidere a formei
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
+        //event-ul de mutare a formei
+        //cand mouse-ul este pe forma si va fi apasat button -ul principal al mouse-ului forma se misca
         private void frm_edit_people_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

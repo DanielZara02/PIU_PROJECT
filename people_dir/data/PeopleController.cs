@@ -8,9 +8,13 @@ namespace people_dir.data
 
     internal class PeopleController
     {
+        //listele care vor stoca datele persoanelor si a grupurilor (temporar)
         public List<People> PeopleList = new List<People>();
 
         public List<string> GroupList = new List<string>();
+
+        //extrage datele din .txt si le adauga intr-un array de tip string
+        //din string-ul dat extrage fiecare cuvant dupa id, si le stocheaza in PeopleList sau GroupList
 
         public People PeopleFromFile()
         {
@@ -41,6 +45,7 @@ namespace people_dir.data
             return new People();
         }
 
+        //returneaza lista grupurilor
         public List<string> retrieveGroupList()
         {
             List<string> result = new List<string>();
@@ -51,6 +56,7 @@ namespace people_dir.data
             return result;
         }
 
+        //returneaza lista persoanelor
         public List<People> retrievePeopleList()
         {
             List<People> result = new List<People>();
@@ -62,18 +68,26 @@ namespace people_dir.data
             return result;
         }
 
+        //functia de adaugare a unei persoane si salvarea in .txt
         public People AddPeople(string name_people, string surname_people, DateTime date_of_birth, string t_number_people, string e_mail_people, string group_people_name)
         {
-            People.count++;
+            try
+            {
+                People.count++;
 
-            string aux = "\n" + People.count.ToString() + " " + name_people + " " + surname_people + " " + date_of_birth.ToString("yyyy-MM-dd") + " " + t_number_people + " " + e_mail_people + " " + group_people_name;
-            File.AppendAllText(Program.path, aux);
+                string aux = "\n" + People.count.ToString() + " " + name_people + " " + surname_people + " " + date_of_birth.ToString("yyyy-MM-dd") + " " + t_number_people + " " + e_mail_people + " " + group_people_name;
+                File.AppendAllText(Program.path, aux);
 
-            PeopleList.Add(new People(People.count, name_people, surname_people, date_of_birth, t_number_people, e_mail_people, group_people_name));
-
+                PeopleList.Add(new People(People.count, name_people, surname_people, date_of_birth, t_number_people, e_mail_people, group_people_name));
+            }
+            catch
+            {
+                return new People();
+            }
             return new People();
         }
 
+        //functia de modificarea datelor a unei persoane si salvarea in .txt
         public People EditPeople(int id_people, string name_people, string surname_people, string new_name_people, string new_surname_people, DateTime new_date_of_birth, string new_t_number_people, string new_e_mail_people, string new_group_people_name)
         {
             int i = 0;
@@ -98,7 +112,7 @@ namespace people_dir.data
 
         }
 
-
+        //functia de steregere a unei persoane si salvarea in .txt
         public People DeletePeople(int id_people, string name_people, string surname_people)
         {
             foreach (var s in data.PeopleDatabase.ToList())
@@ -119,6 +133,7 @@ namespace people_dir.data
             return new People();
         }
 
+        //functia de rescriere a datelor in .txt
         public void SaveToFile()
         {
             File.WriteAllText(Program.path, string.Empty);

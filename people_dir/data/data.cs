@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 
 namespace people_dir.data
 {
     internal class data
     {
+        //lista persoanelor si a grup -urilor salvate in .txt
         public static List<People> PeopleDatabase { get; set; }
         public static List<string> GroupDatabase { get; set; }
 
 
+        //apelul functiei de extragere a datelor din fisier si le adauga in liste
         public static void load_data()
         {
             PeopleController pc = new PeopleController();
@@ -19,6 +20,7 @@ namespace people_dir.data
             PeopleDatabase = pc.retrievePeopleList();
         }
 
+        //creaza un tabel "virtual" cu datele extrase
         public static DataTable database_to_datagrid()
         {
             DataTable dtbl = new DataTable("People");
@@ -26,7 +28,7 @@ namespace people_dir.data
             dtbl.Columns.Add("ID");
             dtbl.Columns.Add("NUME");
             dtbl.Columns.Add("PRENUME");
-            dtbl.Columns.Add("DATA NASTERII");
+            dtbl.Columns.Add("DATA_NASTERII");
             dtbl.Columns.Add("TELEFON");
             dtbl.Columns.Add("MAIL");
             dtbl.Columns.Add("GRUP");

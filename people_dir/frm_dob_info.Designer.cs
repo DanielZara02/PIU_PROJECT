@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_congratulations = new System.Windows.Forms.Label();
             this.pnl_separator = new System.Windows.Forms.Panel();
             this.lbl_text = new System.Windows.Forms.Label();
@@ -51,8 +51,8 @@
             this.lbl_congratulations.Location = new System.Drawing.Point(0, 0);
             this.lbl_congratulations.Margin = new System.Windows.Forms.Padding(20, 0, 3, 0);
             this.lbl_congratulations.Name = "lbl_congratulations";
-            this.lbl_congratulations.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.lbl_congratulations.Size = new System.Drawing.Size(580, 69);
+            this.lbl_congratulations.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.lbl_congratulations.Size = new System.Drawing.Size(466, 69);
             this.lbl_congratulations.TabIndex = 0;
             this.lbl_congratulations.Text = "Felicitări!";
             this.lbl_congratulations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -60,11 +60,11 @@
             // 
             // pnl_separator
             // 
-            this.pnl_separator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.pnl_separator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.pnl_separator.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_separator.Location = new System.Drawing.Point(0, 69);
             this.pnl_separator.Name = "pnl_separator";
-            this.pnl_separator.Size = new System.Drawing.Size(580, 5);
+            this.pnl_separator.Size = new System.Drawing.Size(466, 5);
             this.pnl_separator.TabIndex = 3;
             // 
             // lbl_text
@@ -72,10 +72,10 @@
             this.lbl_text.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_text.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.lbl_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
-            this.lbl_text.Location = new System.Drawing.Point(0, 87);
+            this.lbl_text.Location = new System.Drawing.Point(0, 77);
             this.lbl_text.Name = "lbl_text";
             this.lbl_text.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            this.lbl_text.Size = new System.Drawing.Size(580, 45);
+            this.lbl_text.Size = new System.Drawing.Size(466, 45);
             this.lbl_text.TabIndex = 4;
             this.lbl_text.Text = "Persoanele care își serbează ziua de naștere la data curentă:\r\n";
             this.lbl_text.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -91,45 +91,45 @@
             this.grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grid.DefaultCellStyle = dataGridViewCellStyle8;
             this.grid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.grid.EnableHeadersVisualStyles = false;
             this.grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
-            this.grid.Location = new System.Drawing.Point(0, 132);
+            this.grid.Location = new System.Drawing.Point(0, 122);
             this.grid.MultiSelect = false;
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
             this.grid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.grid.RowHeadersVisible = false;
             this.grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.grid.ShowCellToolTips = false;
             this.grid.ShowEditingIcon = false;
-            this.grid.Size = new System.Drawing.Size(580, 165);
+            this.grid.Size = new System.Drawing.Size(466, 175);
             this.grid.TabIndex = 7;
             // 
             // btn_ok
@@ -142,7 +142,7 @@
             this.btn_ok.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.btn_ok.Location = new System.Drawing.Point(0, 297);
             this.btn_ok.Name = "btn_ok";
-            this.btn_ok.Size = new System.Drawing.Size(580, 54);
+            this.btn_ok.Size = new System.Drawing.Size(466, 54);
             this.btn_ok.TabIndex = 8;
             this.btn_ok.Text = "OK";
             this.btn_ok.UseVisualStyleBackColor = false;
@@ -153,7 +153,7 @@
             this.pnl_none.Controls.Add(this.lbl_none_text);
             this.pnl_none.Location = new System.Drawing.Point(0, 0);
             this.pnl_none.Name = "pnl_none";
-            this.pnl_none.Size = new System.Drawing.Size(580, 297);
+            this.pnl_none.Size = new System.Drawing.Size(466, 297);
             this.pnl_none.TabIndex = 9;
             // 
             // lbl_none_text
@@ -163,10 +163,9 @@
             this.lbl_none_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(42)))), ((int)(((byte)(83)))));
             this.lbl_none_text.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbl_none_text.Location = new System.Drawing.Point(0, 0);
-            this.lbl_none_text.Margin = new System.Windows.Forms.Padding(20, 0, 3, 0);
+            this.lbl_none_text.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_none_text.Name = "lbl_none_text";
-            this.lbl_none_text.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.lbl_none_text.Size = new System.Drawing.Size(580, 297);
+            this.lbl_none_text.Size = new System.Drawing.Size(466, 297);
             this.lbl_none_text.TabIndex = 1;
             this.lbl_none_text.Text = "Nu sunt persoanele care își serbează ziua de naștere la data curentă (\r\n";
             this.lbl_none_text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -177,7 +176,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(36)))));
-            this.ClientSize = new System.Drawing.Size(580, 351);
+            this.ClientSize = new System.Drawing.Size(466, 351);
             this.Controls.Add(this.pnl_none);
             this.Controls.Add(this.lbl_text);
             this.Controls.Add(this.pnl_separator);
