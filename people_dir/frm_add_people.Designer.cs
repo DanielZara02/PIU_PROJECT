@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.pnl_header = new System.Windows.Forms.Panel();
-            this.btn_close = new System.Windows.Forms.PictureBox();
-            this.btn_exit = new System.Windows.Forms.PictureBox();
             this.lbl_header = new System.Windows.Forms.Label();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.txt_t_number = new System.Windows.Forms.TextBox();
@@ -46,6 +44,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btn_ok = new System.Windows.Forms.Button();
             this.txt_surname = new System.Windows.Forms.TextBox();
+            this.btn_close = new System.Windows.Forms.PictureBox();
+            this.btn_exit = new System.Windows.Forms.PictureBox();
             this.pnl_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).BeginInit();
@@ -64,29 +64,6 @@
             this.pnl_header.TabIndex = 5;
             this.pnl_header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_add_people_MouseDown);
             // 
-            // btn_close
-            // 
-            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close.Image = global::people_dir.Properties.Resources.multiply_64px;
-            this.btn_close.Location = new System.Drawing.Point(379, 12);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(48, 30);
-            this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_close.TabIndex = 4;
-            this.btn_close.TabStop = false;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
-            // btn_exit
-            // 
-            this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_exit.Image = global::people_dir.Properties.Resources.multiply_64px;
-            this.btn_exit.Location = new System.Drawing.Point(699, 0);
-            this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(48, 52);
-            this.btn_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_exit.TabIndex = 3;
-            this.btn_exit.TabStop = false;
-            // 
             // lbl_header
             // 
             this.lbl_header.BackColor = System.Drawing.Color.Transparent;
@@ -97,9 +74,9 @@
             this.lbl_header.Margin = new System.Windows.Forms.Padding(20, 0, 3, 0);
             this.lbl_header.Name = "lbl_header";
             this.lbl_header.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.lbl_header.Size = new System.Drawing.Size(150, 52);
+            this.lbl_header.Size = new System.Drawing.Size(285, 52);
             this.lbl_header.TabIndex = 2;
-            this.lbl_header.Text = "Agenda";
+            this.lbl_header.Text = "Adaugă Persoane";
             this.lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txt_name
@@ -111,8 +88,8 @@
             this.txt_name.Location = new System.Drawing.Point(42, 113);
             this.txt_name.Multiline = true;
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(335, 29);
-            this.txt_name.TabIndex = 6;
+            this.txt_name.Size = new System.Drawing.Size(346, 29);
+            this.txt_name.TabIndex = 1;
             // 
             // txt_t_number
             // 
@@ -123,8 +100,8 @@
             this.txt_t_number.Location = new System.Drawing.Point(42, 307);
             this.txt_t_number.Multiline = true;
             this.txt_t_number.Name = "txt_t_number";
-            this.txt_t_number.Size = new System.Drawing.Size(335, 29);
-            this.txt_t_number.TabIndex = 8;
+            this.txt_t_number.Size = new System.Drawing.Size(346, 29);
+            this.txt_t_number.TabIndex = 4;
             // 
             // txt_mail
             // 
@@ -136,7 +113,7 @@
             this.txt_mail.Multiline = true;
             this.txt_mail.Name = "txt_mail";
             this.txt_mail.Size = new System.Drawing.Size(194, 33);
-            this.txt_mail.TabIndex = 9;
+            this.txt_mail.TabIndex = 5;
             // 
             // dtp_date_of_birth
             // 
@@ -150,8 +127,8 @@
             this.dtp_date_of_birth.Location = new System.Drawing.Point(42, 239);
             this.dtp_date_of_birth.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtp_date_of_birth.Name = "dtp_date_of_birth";
-            this.dtp_date_of_birth.Size = new System.Drawing.Size(335, 32);
-            this.dtp_date_of_birth.TabIndex = 10;
+            this.dtp_date_of_birth.Size = new System.Drawing.Size(346, 32);
+            this.dtp_date_of_birth.TabIndex = 3;
             // 
             // cb_mail
             // 
@@ -167,8 +144,8 @@
             "@yandex.ru"});
             this.cb_mail.Location = new System.Drawing.Point(243, 372);
             this.cb_mail.Name = "cb_mail";
-            this.cb_mail.Size = new System.Drawing.Size(134, 33);
-            this.cb_mail.TabIndex = 11;
+            this.cb_mail.Size = new System.Drawing.Size(145, 33);
+            this.cb_mail.TabIndex = 6;
             // 
             // cb_group
             // 
@@ -179,8 +156,8 @@
             this.cb_group.ItemHeight = 25;
             this.cb_group.Location = new System.Drawing.Point(42, 441);
             this.cb_group.Name = "cb_group";
-            this.cb_group.Size = new System.Drawing.Size(334, 33);
-            this.cb_group.TabIndex = 12;
+            this.cb_group.Size = new System.Drawing.Size(346, 33);
+            this.cb_group.TabIndex = 7;
             // 
             // label1
             // 
@@ -269,10 +246,11 @@
             this.btn_ok.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_ok.Location = new System.Drawing.Point(42, 490);
             this.btn_ok.Name = "btn_ok";
-            this.btn_ok.Size = new System.Drawing.Size(334, 44);
-            this.btn_ok.TabIndex = 18;
+            this.btn_ok.Size = new System.Drawing.Size(346, 44);
+            this.btn_ok.TabIndex = 8;
             this.btn_ok.Text = "Adaugă";
             this.btn_ok.UseVisualStyleBackColor = false;
+            this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
             // txt_surname
             // 
@@ -283,8 +261,31 @@
             this.txt_surname.Location = new System.Drawing.Point(41, 178);
             this.txt_surname.Multiline = true;
             this.txt_surname.Name = "txt_surname";
-            this.txt_surname.Size = new System.Drawing.Size(335, 29);
-            this.txt_surname.TabIndex = 19;
+            this.txt_surname.Size = new System.Drawing.Size(347, 29);
+            this.txt_surname.TabIndex = 2;
+            // 
+            // btn_close
+            // 
+            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_close.Image = global::people_dir.Properties.Resources.multiply_64px;
+            this.btn_close.Location = new System.Drawing.Point(379, 12);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(48, 30);
+            this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_close.TabIndex = 4;
+            this.btn_close.TabStop = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
+            // btn_exit
+            // 
+            this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exit.Image = global::people_dir.Properties.Resources.multiply_64px;
+            this.btn_exit.Location = new System.Drawing.Point(699, 0);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(48, 52);
+            this.btn_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_exit.TabIndex = 3;
+            this.btn_exit.TabStop = false;
             // 
             // frm_add_people
             // 

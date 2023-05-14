@@ -3,7 +3,6 @@ using people_dir.Properties;
 using System;
 using System.Data;
 using System.Drawing;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace people_dir
@@ -17,52 +16,49 @@ namespace people_dir
 
         private void frm_main_Load(object sender, EventArgs e)
         {
-            data.data.load_data();
+            fill_data();
             grid_fill();
-            pnl_control.Hide();
-            btn_hide.Hide();
+            btn_show.Hide();
 
             frm_dob_info f = new frm_dob_info();
             f.ShowDialog();
         }
 
-        private void grid_fill()
+        private void fill_data()
         {
+            data.data.load_data();
             DataTable dtbl = data.data.database_to_datagrid();
             grid.DataSource = dtbl;
-
-            DataGridViewImageColumn edit = new DataGridViewImageColumn();
-            DataGridViewImageColumn delete = new DataGridViewImageColumn();
-            Image image;
-
-            for (int i = 0; i < grid.Rows.Count - 1; i++)
+        }
+        private void grid_fill()
+        {
+            if (grid.Columns.Contains("EDIT") == false && grid.Columns.Contains("DELETE") == false)
             {
-                DataGridViewRow row = grid.Rows[i];
 
-                string value = DateTime.Parse(row.Cells[People.DATE_OF_BIRTH].Value.ToString()).ToString("MM-dd");
+                DataGridViewImageColumn edit = new DataGridViewImageColumn();
+                DataGridViewImageColumn delete = new DataGridViewImageColumn();
+                Image image;
 
-                if (value == DateTime.Today.ToString("MM-dd"))
-                {
-                    grid.Rows[row.Index].DefaultCellStyle.ForeColor = Color.FromArgb(235, 42, 83);
-                }
+                image = Resources.pencil_64px;
+                edit.Image = image;
+                grid.Columns.Add(edit);
+                edit.HeaderText = "EDIT";
+                edit.Name = "EDIT";
+                this.grid.Columns["EDIT"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                ((DataGridViewImageColumn)grid.Columns["EDIT"]).ImageLayout = DataGridViewImageCellLayout.Zoom;
+
+
+                image = Resources.trash_can_64px;
+                delete.Image = image;
+                grid.Columns.Add(delete);
+                delete.HeaderText = "DELETE";
+                delete.Name = "DELETE";
+                this.grid.Columns["DELETE"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                ((DataGridViewImageColumn)grid.Columns["DELETE"]).ImageLayout = DataGridViewImageCellLayout.Zoom;
+
+                this.grid.Columns["EDIT"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                this.grid.Columns["DELETE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             }
-
-            image = Resources.pencil_64px;
-            edit.Image = image;
-            grid.Columns.Add(edit);
-            edit.HeaderText = "EDIT";
-            edit.Name = "EDIT";
-            this.grid.Columns["EDIT"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            ((DataGridViewImageColumn)grid.Columns["EDIT"]).ImageLayout = DataGridViewImageCellLayout.Zoom;
-
-
-            image = Resources.trash_can_64px;
-            delete.Image = image;
-            grid.Columns.Add(delete);
-            delete.HeaderText = "DELETE";
-            delete.Name = "DELETE";
-            this.grid.Columns["DELETE"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            ((DataGridViewImageColumn)grid.Columns["DELETE"]).ImageLayout = DataGridViewImageCellLayout.Zoom;
 
             this.grid.Columns[People.ID].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.grid.Columns[People.NAME].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -71,13 +67,7 @@ namespace people_dir
             this.grid.Columns[People.T_NUMBER].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.grid.Columns[People.EMAIL].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.grid.Columns[People.GROUP_NAME].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.grid.Columns["EDIT"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.grid.Columns["DELETE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-        }
-
-        private void add_person_Click(object sender, EventArgs e)
-        {
-
+           
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -123,6 +113,100 @@ namespace people_dir
         private void btn_add_people_Click(object sender, EventArgs e)
         {
             frm_add_people f = new frm_add_people();
+            f.ShowDialog();
+            fill_data();
+            return;
+        }
+
+        private void grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Skip the Column and Row Headers
+
+            if (e.ColumnIndex < 0 || e.RowIndex < 0)
+            {
+                return;
+            }
+
+            int edit_id = grid.Columns["EDIT"].Index;
+            int delete_id = grid.Columns["DELETE"].Index;
+
+            int id_people = Int32.Parse(grid.CurrentRow.Cells["ID"].Value.ToString());
+            string name_people = grid.CurrentRow.Cells["NUME"].Value.ToString();
+            string surname_people = grid.CurrentRow.Cells["PRENUME"].Value.ToString();
+
+            if (e.ColumnIndex == edit_id)
+            {
+                frm_edit_people f = new frm_edit_people();
+
+
+                f.id_people = id_people;
+                f.name_people = name_people;
+                f.surname_people = surname_people;
+
+                try
+                {
+                    string message = string.Format("Doriți să modificați datele persoanei: [{0}] din fișier?", f.name_people + " " + f.surname_people);
+
+                    if (MessageBox.Show(message, "Confirmați Modificarea!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        f.txt_name.Text = grid.Rows[e.RowIndex].Cells["NUME"].Value.ToString();
+                        f.txt_surname.Text = grid.Rows[e.RowIndex].Cells["PRENUME"].Value.ToString();
+                        f.dtp_date_of_birth.Value = Convert.ToDateTime(grid.Rows[e.RowIndex].Cells["DATA NASTERII"].Value.ToString());
+                        f.txt_t_number.Text = grid.Rows[e.RowIndex].Cells["TELEFON"].Value.ToString();
+
+                        string mail = grid.Rows[e.RowIndex].Cells["MAIL"].Value.ToString();
+                        string[] _mail = mail.Split('@');
+
+                        f.txt_mail.Text = _mail[0];
+                        f.cb_mail.Text = "@" + _mail[1];
+
+                        f.cb_group.Text = grid.Rows[e.RowIndex].Cells["GRUP"].Value.ToString();
+
+                        f.ShowDialog();
+
+                        fill_data();
+
+                        return;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (e.ColumnIndex == delete_id)
+            {
+                try
+                {
+                    string message = string.Format("Doriți să ștergeți persoana: [{0}] din fișier?", name_people + " " + surname_people);
+
+                    if (MessageBox.Show(message, "Confirmați Ștergerea!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        PeopleController pc = new PeopleController();
+                        pc.DeletePeople(id_people, name_people, surname_people);
+                        fill_data();
+
+                        return;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btn_search_date_Click(object sender, EventArgs e)
+        {
+            frm_search_by_date f = new frm_search_by_date();
+            f.ShowDialog();
+        }
+
+        private void btn_people_group_Click(object sender, EventArgs e)
+        {
+            frm_group f = new frm_group();
             f.ShowDialog();
         }
     }

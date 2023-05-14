@@ -28,34 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grid = new System.Windows.Forms.DataGridView();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.pnl_header = new System.Windows.Forms.Panel();
+            this.btn_exit = new System.Windows.Forms.PictureBox();
             this.lbl_header = new System.Windows.Forms.Label();
             this.pnl_control = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_add_people = new System.Windows.Forms.Label();
-            this.lbl_search_date = new System.Windows.Forms.Label();
-            this.lbl_people_group = new System.Windows.Forms.Label();
             this.btn_add_people = new System.Windows.Forms.PictureBox();
             this.btn_search_date = new System.Windows.Forms.PictureBox();
+            this.lbl_search_date = new System.Windows.Forms.Label();
             this.btn_people_group = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbl_people_group = new System.Windows.Forms.Label();
             this.btn_hide = new System.Windows.Forms.PictureBox();
             this.btn_show = new System.Windows.Forms.PictureBox();
-            this.btn_exit = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.pnl_header.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).BeginInit();
             this.pnl_control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_add_people)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_search_date)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_people_group)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_hide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_show)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).BeginInit();
             this.SuspendLayout();
             // 
             // grid
@@ -69,23 +67,23 @@
             this.grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.grid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.grid.EnableHeadersVisualStyles = false;
             this.grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
@@ -94,14 +92,14 @@
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
             this.grid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grid.RowHeadersVisible = false;
             this.grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -109,6 +107,7 @@
             this.grid.ShowEditingIcon = false;
             this.grid.Size = new System.Drawing.Size(752, 323);
             this.grid.TabIndex = 0;
+            this.grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellContentClick);
             // 
             // txt_search
             // 
@@ -116,7 +115,7 @@
             this.txt_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_search.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
             this.txt_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.txt_search.Location = new System.Drawing.Point(502, 165);
+            this.txt_search.Location = new System.Drawing.Point(490, 165);
             this.txt_search.Multiline = true;
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(250, 29);
@@ -134,6 +133,18 @@
             this.pnl_header.Size = new System.Drawing.Size(752, 52);
             this.pnl_header.TabIndex = 4;
             this.pnl_header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_main_MouseDown);
+            // 
+            // btn_exit
+            // 
+            this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exit.Image = global::people_dir.Properties.Resources.multiply_64px;
+            this.btn_exit.Location = new System.Drawing.Point(692, 12);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(48, 30);
+            this.btn_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_exit.TabIndex = 5;
+            this.btn_exit.TabStop = false;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // lbl_header
             // 
@@ -187,34 +198,6 @@
             this.lbl_add_people.Text = "ADD PEOPLE";
             this.lbl_add_people.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_search_date
-            // 
-            this.lbl_search_date.AutoSize = true;
-            this.lbl_search_date.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.lbl_search_date.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_search_date.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
-            this.lbl_search_date.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lbl_search_date.Location = new System.Drawing.Point(83, 71);
-            this.lbl_search_date.Name = "lbl_search_date";
-            this.lbl_search_date.Size = new System.Drawing.Size(74, 20);
-            this.lbl_search_date.TabIndex = 6;
-            this.lbl_search_date.Text = "SEARCH";
-            this.lbl_search_date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_people_group
-            // 
-            this.lbl_people_group.AutoSize = true;
-            this.lbl_people_group.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.lbl_people_group.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_people_group.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
-            this.lbl_people_group.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lbl_people_group.Location = new System.Drawing.Point(163, 71);
-            this.lbl_people_group.Name = "lbl_people_group";
-            this.lbl_people_group.Size = new System.Drawing.Size(74, 20);
-            this.lbl_people_group.TabIndex = 8;
-            this.lbl_people_group.Text = "GROUP\'s";
-            this.lbl_people_group.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btn_add_people
             // 
             this.btn_add_people.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
@@ -241,6 +224,21 @@
             this.btn_search_date.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_search_date.TabIndex = 5;
             this.btn_search_date.TabStop = false;
+            this.btn_search_date.Click += new System.EventHandler(this.btn_search_date_Click);
+            // 
+            // lbl_search_date
+            // 
+            this.lbl_search_date.AutoSize = true;
+            this.lbl_search_date.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.lbl_search_date.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_search_date.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            this.lbl_search_date.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbl_search_date.Location = new System.Drawing.Point(83, 71);
+            this.lbl_search_date.Name = "lbl_search_date";
+            this.lbl_search_date.Size = new System.Drawing.Size(74, 20);
+            this.lbl_search_date.TabIndex = 6;
+            this.lbl_search_date.Text = "SEARCH";
+            this.lbl_search_date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_people_group
             // 
@@ -254,17 +252,21 @@
             this.btn_people_group.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_people_group.TabIndex = 7;
             this.btn_people_group.TabStop = false;
+            this.btn_people_group.Click += new System.EventHandler(this.btn_people_group_Click);
             // 
-            // pictureBox1
+            // lbl_people_group
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox1.Image = global::people_dir.Properties.Resources.search_contacts_64px;
-            this.pictureBox1.Location = new System.Drawing.Point(459, 165);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.lbl_people_group.AutoSize = true;
+            this.lbl_people_group.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.lbl_people_group.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_people_group.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            this.lbl_people_group.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbl_people_group.Location = new System.Drawing.Point(163, 71);
+            this.lbl_people_group.Name = "lbl_people_group";
+            this.lbl_people_group.Size = new System.Drawing.Size(74, 20);
+            this.lbl_people_group.TabIndex = 8;
+            this.lbl_people_group.Text = "GROUP\'s";
+            this.lbl_people_group.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_hide
             // 
@@ -290,18 +292,6 @@
             this.btn_show.TabStop = false;
             this.btn_show.Click += new System.EventHandler(this.btn_show_Click);
             // 
-            // btn_exit
-            // 
-            this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_exit.Image = global::people_dir.Properties.Resources.multiply_64px;
-            this.btn_exit.Location = new System.Drawing.Point(692, 12);
-            this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(48, 30);
-            this.btn_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_exit.TabIndex = 5;
-            this.btn_exit.TabStop = false;
-            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
-            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,7 +299,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(752, 523);
             this.Controls.Add(this.pnl_control);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnl_header);
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.grid);
@@ -323,15 +312,14 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_main_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.pnl_header.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).EndInit();
             this.pnl_control.ResumeLayout(false);
             this.pnl_control.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_add_people)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_search_date)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_people_group)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_hide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_show)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,7 +329,6 @@
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.Panel pnl_header;
         private System.Windows.Forms.Label lbl_header;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView grid;
         private System.Windows.Forms.PictureBox btn_show;
         private System.Windows.Forms.PictureBox btn_hide;

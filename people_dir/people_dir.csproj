@@ -60,6 +60,18 @@
     <Compile Include="frm_dob_info.Designer.cs">
       <DependentUpon>frm_dob_info.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_edit_people.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_edit_people.Designer.cs">
+      <DependentUpon>frm_edit_people.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_group.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_group.Designer.cs">
+      <DependentUpon>frm_group.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +79,12 @@
       <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
     <Compile Include="data\People.cs" />
+    <Compile Include="frm_search_by_date.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_search_by_date.Designer.cs">
+      <DependentUpon>frm_search_by_date.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_add_people.resx">
@@ -75,8 +93,17 @@
     <EmbeddedResource Include="frm_dob_info.resx">
       <DependentUpon>frm_dob_info.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_edit_people.resx">
+      <DependentUpon>frm_edit_people.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_group.resx">
+      <DependentUpon>frm_group.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_search_by_date.resx">
+      <DependentUpon>frm_search_by_date.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,6 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user_groups_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\available_updates_64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,13 +1,5 @@
 ﻿using people_dir.data;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace people_dir
@@ -21,7 +13,7 @@ namespace people_dir
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
 
         private void frm_add_people_MouseDown(object sender, MouseEventArgs e)
@@ -38,6 +30,39 @@ namespace people_dir
             foreach (string group in data.data.GroupDatabase)
             {
                 cb_group.Items.Add(group);
+            }
+
+            cb_group.SelectedIndex = 0;
+            cb_mail.SelectedIndex = 0;
+
+        }
+
+        private void btn_ok_Click(object sender, EventArgs e)
+        {
+            PeopleController pc = new PeopleController();
+
+            if(txt_name.Text.Length == 0 || txt_surname.Text.Length == 0 || txt_t_number.Text.Length == 0 || txt_mail.Text.Length == 0)
+            {
+                MessageBox.Show("Completați toate căsuțele!", "Alert!");
+            }
+            else if (txt_name.Text.Length < 3 || txt_surname.Text.Length < 3 || txt_t_number.Text.Length < 3 || txt_mail.Text.Length < 3)
+            {
+                MessageBox.Show("Completați cu minim 3 caractere!", "Alert!");
+            }
+            else
+            {
+                MessageBox.Show("Persoana a fost adăugată cu success!", "Success!");
+
+                pc.AddPeople(txt_name.Text, txt_surname.Text, dtp_date_of_birth.Value, txt_t_number.Text, txt_mail.Text + cb_mail.Text, cb_group.Text);
+
+                txt_name.Text = null;
+                txt_surname.Text = null;
+                txt_t_number.Text = null;
+                txt_mail.Text = null;
+                cb_group.SelectedIndex = 0;
+                cb_mail.SelectedIndex = 0;
+
+                this.Dispose();
             }
         }
     }

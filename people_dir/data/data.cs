@@ -21,7 +21,6 @@ namespace people_dir.data
 
         public static DataTable database_to_datagrid()
         {
-
             DataTable dtbl = new DataTable("People");
 
             dtbl.Columns.Add("ID");

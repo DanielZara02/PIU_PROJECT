@@ -38,8 +38,6 @@ namespace people_dir.data
             this.t_number_people = t_number_people;
             this.e_mail_people = e_mail_people;
             this.group_people_name = group_people_name;
-
-            People.count++;
         }
     }
 }

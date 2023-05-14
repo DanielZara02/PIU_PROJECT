@@ -73,6 +73,16 @@ namespace people_dir.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap available_updates_64px {
+            get {
+                object obj = ResourceManager.GetObject("available_updates_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap back_64px {
             get {
                 object obj = ResourceManager.GetObject("back_64px", resourceCulture);
